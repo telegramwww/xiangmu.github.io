@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目乐（@XiangMuLe）资源导航 - 做项目/创作必备</title>
+    <style>
+        :root {
+            --bg-color: #0a0e17;
+            --card-bg: #161b22;
+            --primary-color: #00d4ff;
+            --accent-color: #7000ff;
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+            --btn-grad: linear-gradient(135deg, #00d4ff 0%, #7000ff 100%);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to bottom, rgba(0,212,255,0.1), transparent);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .subtitle {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .category-title {
+            grid-column: 1 / -1;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin: 30px 0 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .icon-tag {
+            background: var(--btn-grad);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(112, 0, 255, 0.4);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .btn-main {
+            background: var(--btn-grad);
+            color: white;
+        }
+
+        .btn-main:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-sub {
+            background: #21262d;
+            color: var(--text-main);
+            border: 1px solid #30363d;
+        }
+
+        .btn-sub:hover {
+            background: #30363d;
+        }
+
+        .ad-banner {
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+        }
+
+        .ad-banner img {
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .ad-banner img:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>项目乐（@XiangMuLe）资源导航</h1>
+        <div class="subtitle">做项目/创作必备 · 效率与财富之源</div>
+    </header>
+
+    <div class="grid">
+        <!-- 分类 1 -->
+        <div class="category-title">搞钱项目专区</div>
+        
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">★ 收藏</span><span class="card-title">每日赚钱项目库</span></div>
+                <p class="card-desc">聚合全网最新暴利项目，每日更新，免墙直连，小白也能轻松上手的创富经。</p>
+            </div>
+            <div class="btn-group">
+                <a href="https://xiangmule.pages.dev/" class="btn btn-main" target="_blank">立即进入</a>
+                <a href="https://xiangmule.netlify.app/" class="btn btn-sub" target="_blank">备用通道</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🔥 牛</span><span class="card-title">地推拉新任务台</span></div>
+                <p class="card-desc">官方直一级接渠道，整合全网热门APP拉新任务，佣金极高，结算稳定无套路。</p>
+            </div>
+            <a href="https://dt.bd.cn/#/pages/login/register?invite_code=701658&qd=self_team_android" class="btn btn-main" target="_blank">领取任务赚钱</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🚀 火</span><span class="card-title">网盘转存躺赚</span></div>
+                <p class="card-desc">只需分享文件即可获利，支持免费领SVIP及超大空间，资源变现从未如此简单。</p>
+            </div>
+            <a href="https://www.xingjushidai.com/#/pagesLogin/enroll?invitecode=89286" class="btn btn-main" target="_blank">开启网盘变现</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🎬 火</span><span class="card-title">小说短剧分润</span></div>
+                <p class="card-desc">抓住短视频风口，一键挂载热门短剧/小说，享受高额流量分成，居家必备副业。</p>
+            </div>
+            <a href="https://newapi.thed1g.com/?type=1&recommend=73666355" class="btn btn-main" target="_blank">开始分润</a>
+        </div>
+
+        <!-- 分类 2 -->
+        <div class="category-title">AI 创作神器</div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🤖 AI</span><span class="card-title">超级智能体平台</span></div>
+                <p class="card-desc">涵盖AI Agent、智能浏览器、生图、视频生成及智能剪辑。极大地提升工作效率，让创作无边际。（需魔法上网）</p>
+            </div>
+            <a href="https://genspark.ai?via=openai" class="btn btn-main" target="_blank">立即体验</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🎵 听</span><span class="card-title">SUNO AI音乐生成</span></div>
+                <p class="card-desc">仅需文字描述即可生成专业级原创音乐，人人都是词曲创作者，赋予作品灵魂。</p>
+            </div>
+            <a href="https://suno.com/invite/@ihua" class="btn btn-main" target="_blank">创作音乐</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">📽 视</span><span class="card-title">无限时长视频生成</span></div>
+                <p class="card-desc">打破时长限制，InfiniteTalk助您生成高质量长视频，告别短视频剪辑烦恼。</p>
+            </div>
+            <a href="https://www.infinitetalk.net/?i=y8l2w" class="btn btn-main" target="_blank">生成长视频</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🎙 音</span><span class="card-title">免费 AI 声音克隆</span></div>
+                <p class="card-desc">完美克隆任何声音，情感自然，支持多语种，为您的解说视频注入独特个性。</p>
+            </div>
+            <a href="https://nicevoice.org?ref=cRtSf" class="btn btn-main" target="_blank">克隆声音</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">⚡ 爆</span><span class="card-title">热点视频自动生成</span></div>
+                <p class="card-desc">实时监控全网热点，全自动生成爆款视频，助您快速收割流量红利。</p>
+            </div>
+            <a href="https://ducut.baidu.com/share-activity.html?invite_code=QrcPlEqN5+xNo9I7jQ54ew&" class="btn btn-main" target="_blank">追踪热点</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🎁 领</span><span class="card-title">千万级 Token 免费领</span></div>
+                <p class="card-desc">大模型爱好者福利！免费领取1000万Token，畅用全球顶尖大模型，无成本开发。</p>
+            </div>
+            <a href="https://s.qiniu.com/EBj2aa" class="btn btn-main" target="_blank">立即领取</a>
+        </div>
+
+        <!-- 分类 3 -->
+        <div class="category-title">云服务优惠</div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">☁ 荐</span><span class="card-title">阿里云服务器</span></div>
+                <p class="card-desc">最高300元免费额度，大厂品质保证，稳定建站、跑程序的不二之选。</p>
+            </div>
+            <a href="https://free.aliyun.com/?source=5176.29345612&userCode=ou8f2ae2" class="btn btn-main" target="_blank">领取300元额度</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">☁ 荐</span><span class="card-title">腾讯云服务器</span></div>
+                <p class="card-desc">新用户免费试用30天，性能强劲，极速部署，助力您的项目平滑上线。</p>
+            </div>
+            <a href="https://cloud.tencent.com/act/cps/redirect?redirect=36772&cps_key=35416a9af6f3a8f5f62674f8150ab600" class="btn btn-main" target="_blank">申请免费试用</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🌏 惠</span><span class="card-title">东南亚跨境云主机</span></div>
+                <p class="card-desc">极致性价比！年付仅需61元，出海业务必备，低延迟高稳定，跨境创业首选。</p>
+            </div>
+            <a href="https://www.ucloud.cn/site/active/vietnam-global.html?cps_code=7Z9UfnvpKaKF5kNxL0BdyM" class="btn btn-main" target="_blank">一键抢购</a>
+        </div>
+
+        <!-- 分类 4 -->
+        <div class="category-title">生活福利与线报</div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🍔 惠</span><span class="card-title">饿了么天天大红包</span></div>
+                <p class="card-desc">每日可领超大面额外卖红包，最高可省几十元，让每一餐都变得更划算。</p>
+            </div>
+            <a href="https://m.duanqu.com/?_ariver_appid=8251537&page=plugin-private%3A%2F%2F2021004134685665%2Fpages%2Ftaoke-guide%2Findex%3Ffrom%3Dminiapp.taobao%26channelInfo%3D%7B%22subSubChannel%22%3A%22miniapp.taobao.et%22%7D%26alsc_exsrc%3DES0006299852%26scene%3D022fa5f1bdfc471ab57d7761891083c4" class="btn btn-main" target="_blank">领当日红包</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-header"><span class="icon-tag">🎁 撸</span><span class="card-title">撸货白嫖情报站</span></div>
+                <p class="card-desc">实时同步全网薅羊毛线报，白嫖实物、低价漏洞单，掌握第一手省钱赚钱资讯。</p>
+            </div>
+            <a href="https://erqing.pages.dev/" class="btn btn-main" target="_blank">进入情报站</a>
+        </div>
+    </div>
+
+    <!-- 底部广告 -->
+    <a href="https://union-click.jd.com/jdc?e=618%7Cpc%7C&p=JF8BAPkJK1olXDYDZBoCUBVIMzZNXhpXVhgcFR0DFxBCHD1WR0VJDVtfSg4PTRNQV3ELYT9hInJcFC0_aD9VfmgPHgJAHmVkDT4UDBhnHTdXTg9cQl9HCANtWx5PZBZSYR1wCAFrPAgfbRgQeRQIXVcZbQMCVV9YDEMfCm84GFoVXA8DXFlVDnsnA2w4UDUUbQQDVVtdDUofBGY4G10SWwYKXVxVAE8RB18PG1IlXwQAXFxaCUoTH20AH1kRWzYyZF1tD0seF2l6WgkBW3QyZFxtC3snAW4JH1IlbdiMwDxeCywQBTx-YwZAH25aVzmDht8GfwsMG1oQTDYyZG4" class="ad-banner" target="_blank">
+        <img src="https://m.360buyimg.com/babel/jfs/t1/266100/32/15351/47385/6794d599F22b20425/1ebc9d6280214bea.jpg.webp" alt="广告特惠">
+    </a>
+
+    <footer>
+        &copy; 2026 项目乐（@XiangMuLe）资源导航 - 财富与效率的连接者
+    </footer>
+</div>
+
+</body>
+</html>
